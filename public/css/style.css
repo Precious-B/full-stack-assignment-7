@@ -1,0 +1,130 @@
+body {
+font-family: Arial, sans-serif;
+}
+
+.container {
+flex-direction: column;
+}
+
+.header {
+display: flex;
+gap: 180px;
+background-color: #36454F;
+align-items: center;
+padding-left: 30px;
+}
+
+.profile {
+clip-path: circle(45%);
+}
+
+.intro {
+display: flex;
+flex-direction: column;
+padding-top: 50px;
+padding-bottom: 60px;
+padding-left: 62px;
+}
+
+.name {
+color: white;
+}
+
+.introduction {
+color: white;
+}
+
+.content {
+display: flex;
+gap: 200px;
+}
+
+.left-column {
+background-color: #A0D6B4;
+align-items: center;
+padding-left: 30px;
+padding-top: 20px;
+padding-right: 30px;
+align-items: center;
+font-size: 15px;
+max-width: 300px;
+}
+
+.phone {
+display: flex;
+align-items: center;
+}
+
+.phone-icon {
+width: 30px;
+height: 30px;
+display: inline-flex;
+align-items: center;
+text-decoration: none;
+color:#333;
+margin-right: 14px;
+}
+
+.links {
+display: grid;
+align-items: center;
+}
+
+a {
+font-size: 15px;
+color: blue;
+}
+
+.email-icon {
+width: 30px;
+height: 30px;
+display: inline-flex;
+align-items: center;
+text-decoration: none;
+color:#333;
+margin-right: 15px;
+}
+
+.git-icon {
+width: 30px;
+height: 30px;
+display: inline-flex;
+align-items: center;
+text-decoration: none;
+color:#333;
+margin-right: 15px;
+}
+
+.linkedin-icon {
+width: 30px;
+height: 30px;
+display: inline-flex;
+align-items: center;
+text-decoration: none;
+color:#333;
+margin-right: 15px;
+}
+
+.line {
+border: none;
+border-top: 1px solid #000;
+width: 90%;
+}
+
+.experience {
+box-align: left;
+padding-top: 20px;
+}
+
+.work {
+font-weight: bold;
+color: green;
+}
+
+ul {
+text-align: left;
+}
+
+em {
+color: gray;
+}

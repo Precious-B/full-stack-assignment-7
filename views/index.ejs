@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Curriculum Vitae</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <img class="profile" src="<%= resume.profileImage %>" alt="Profile picture"/>
+
+        <div class="intro">
+            <h1 class="name"><%= resume.name %></h1>
+            <p class="introduction"><%= resume.introduction %></p>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="left-column">
+
+            <h2>CONTACT INFORMATION</h2>
+
+            <div class="phone">
+                <img src="/images/phone.png" alt="Phone" class="phone-icon"/>
+                <p>
+                    <% resume.contact.phone.forEach(phone => { %>
+                        <%= phone %><br>
+                    <% }) %>
+                </p>
+            </div>
+
+            <div class="links">
+
+                <a href="mailto:<%= resume.contact.email %>">
+                    <img src="/images/email.png" alt="Gmail" class="email-icon"/>
+                    Email
+                </a>
+
+                <a href="<%= resume.contact.github %>" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/github.png" alt="Github" class="git-icon"/>
+                    Github
+                </a>
+
+                <a href="<%= resume.contact.linkedin %>" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/linkedin.png" alt="LinkedIn" class="linkedin-icon"/>
+                    LinkedIn
+                </a>
+
+            </div>
+
+            <hr class="line">
+
+            <h2>EDUCATION</h2>
+
+            <% resume.education.forEach(education => { %>
+
+                <p>
+                    <%= education.institution %>, <%= education.location %>
+
+                    <em>
+                        – <%= education.qualification %><br>
+                        <%= education.startDate %>
+                        <% if (education.endDate) { %>
+                            - <%= education.endDate %>
+                        <% } %>
+                    </em>
+                </p>
+
+            <% }) %>
+
+            <hr class="line">
+
+            <div class="left-lower-column">
+
+                <h2>SKILLS</h2>
+
+                <ul>
+                    <% resume.skills.forEach(skill => { %>
+                        <li><%= skill %></li>
+                    <% }) %>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="right-column">
+
+            <h2 class="experience">EXPERIENCE/PROJECTS</h2>
+
+            <% resume.experience.forEach(job => { %>
+
+                <p class="work">
+                    <%= job.company %>, <%= job.location %>
+
+                    <em>
+                        – <%= job.position %><br>
+                        <%= job.startDate %> - <%= job.endDate %>
+                    </em>
+                </p>
+
+                <ul>
+                    <% job.responsibilities.forEach(responsibility => { %>
+                        <li><%= responsibility %></li>
+                    <% }) %>
+                </ul>
+
+            <% }) %>
+
+            <div class="right-lower-column">
+
+                <h2>REFERENCES</h2>
+                <p><%= resume.references %></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
